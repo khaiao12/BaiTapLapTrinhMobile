@@ -1,6 +1,6 @@
 Bài Tập 1:
 
-1. Sau khi hóc xong môn học, tôi muốn Nâng cao kỹ năng lập trình, Hiểu biết sâu về UX/UI.
+1. Sau khi học xong môn học, tôi muốn Nâng cao kỹ năng lập trình, Hiểu biết sâu về UX/UI.
 Định hướng: tiếp tục tìm hiểu và cập nhật các công nghệ mới trong lĩnh vực, tìm kiếm cơ hội thực tập, bắt đầu một hoặc nhiều dự án cá nhân để thực hành
 2. Trong 10 năm tới, lập trình di động có khả năng phát triển vì một số lý do sau:
 Sự Tăng Trưởng Của Thiết Bị Di Động: Số lượng người dùng smartphone và thiết bị di động tiếp tục tăng, đặc biệt ở các thị trường đang phát triển.
