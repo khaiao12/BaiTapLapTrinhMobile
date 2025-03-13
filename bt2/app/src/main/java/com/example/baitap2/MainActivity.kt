@@ -42,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         // Thêm sách mẫu
         library.addBook(Book(1, "1984", "George Orwell"))
         library.addBook(Book(2, "To Kill a Mockingbird", "Harper Lee"))
+        library.addBook(Book(3, "Nhà Giả Kim", "Paulo Coelho"))
+        library.addBook(Book(4, "Đắc Nhân Tâm", "Dale Carnegie"))
+        library.addBook(Book(5, "Cách nghĩ để thành công", "Napoleon Hill"))
+        library.addBook(Book(6, "Quẳng gánh lo đi và vui sống", "Dale Carnegie"))
 
         // Hiển thị danh sách sách
         displayBooks()
