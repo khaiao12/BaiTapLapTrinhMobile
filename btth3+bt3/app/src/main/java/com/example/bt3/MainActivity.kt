@@ -14,7 +14,14 @@ class MainActivity : ComponentActivity() {
             val navController = rememberNavController()
             NavHost(navController = navController, startDestination = "home") {
                 composable("home") { AppContent(navController) }
-                composable("content") { ContentScreen() }
+                composable("content") { ContentScreen(navController) }
+                composable("Text") { TextScreen(navController) }
+                composable("Image") { ImageScreen(navController) }
+                composable("TextField") { TextFieldScreen(navController)}
+                composable("PasswordField") { PasswordFieldScreen(navController)}
+                composable("Column") { ColumnScreen(navController)}
+                composable("Row") { RowScreen(navController)}
+                composable("Box") { BoxScreen(navController)}
             }
         }
     }

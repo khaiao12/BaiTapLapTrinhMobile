@@ -1,5 +1,6 @@
 package com.example.bt3
 
+import android.text.style.StrikethroughSpan
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.Button
@@ -13,9 +14,20 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.TopAppBar
+import androidx.compose.ui.text.buildAnnotatedString
+import androidx.compose.ui.text.font.FontStyle
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.text.withStyle
+import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
+import androidx.navigation.compose.NavHost
+import androidx.navigation.compose.composable
 
 @Composable
-fun ContentScreen() {
+fun ContentScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
@@ -33,22 +45,25 @@ fun ContentScreen() {
         )
 
         SectionTitle(title = "Display")
-        ButtonItem(title = "Text", description = "Displays text")
-        ButtonItem(title = "Image", description = "Displays an image")
+        ButtonItem(title = "Text", description = "Displays text", navController)
+        ButtonItem(title = "Image", description = "Displays an image", navController)
         SectionTitle(title = "Input")
-        ButtonItem(title = "TextField", description = "Input field for text")
-        ButtonItem(title = "PasswordField", description = "Input field for passwords")
+        ButtonItem(title = "TextField", description = "Input field for text", navController)
+        ButtonItem(title = "PasswordField", description = "Input field for passwords", navController)
         SectionTitle(title = "Layout")
-        ButtonItem(title = "Column", description = "Arranges elements vertically")
-        ButtonItem(title = "Row", description = "Arranges elements horizontally")
+        ButtonItem(title = "Column", description = "Arranges elements vertically", navController)
+        ButtonItem(title = "Row", description = "Arranges elements horizontally", navController)
+        ButtonItem(title = "Box", description = "Box", navController)
     }
 }
 
 @Composable
-fun ButtonItem(title: String, description: String) {
+fun ButtonItem(title: String, description: String, navController: NavController) {
 
         Button(
-            onClick = { /* TODO: Handle button click */ },
+            onClick = {
+                navController.navigate(title)
+            },
             modifier = Modifier.fillMaxWidth(),
             colors = ButtonDefaults.buttonColors(containerColor = Color.Cyan)
         ) {
@@ -75,8 +90,165 @@ fun SectionTitle(title: String) {
     )
 }
 
+@Composable
+fun CustomTopAppBar(navController: NavController, title: String) {
+    Row(
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(16.dp)
+            .height(56.dp),
+        verticalAlignment = Alignment.CenterVertically
+    ) {
+        IconButton(onClick = { navController.popBackStack() }) {
+            Text("<", color = Color.Blue, fontSize = 40.sp) // Biểu tượng trở về
+        }
+        Spacer(modifier = Modifier.width(50.dp))
+        Text(text = title, color = Color.Blue, fontSize = 40.sp)
+    }
+}
+
+@Composable
+fun TextScreen(navController: NavController) {
+    Column(
+        modifier = Modifier.fillMaxSize()
+    ) {
+        CustomTopAppBar(navController, title = "Text Detail")
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp),
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            Text(
+                text = "The ",
+                fontSize = 24.sp,
+                modifier = Modifier.padding(top = 16.dp)
+            )
+            Text(
+                text = "quick",
+                fontSize = 24.sp,
+                textDecoration = TextDecoration.LineThrough
+
+            )
+            Text(
+                text = "Brown",
+                fontSize = 30.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0xFF8B4513) // Màu nâu
+            )
+            Text(
+                text = "over",
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = "the",
+                fontSize = 24.sp,
+                textDecoration = TextDecoration.Underline
+            )
+            Text(
+                text = "lazy",
+                fontSize = 24.sp,
+                fontStyle = FontStyle.Italic,
+                fontWeight = FontWeight.Bold
+            )
+            Text(
+                text = "dog.",
+                fontSize = 24.sp
+            )
+            Spacer(modifier = Modifier.height(32.dp))
+        }
+    }
+}
+
+@Composable
+fun ImageScreen(navController: NavController) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("This is the Image Screen")
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { navController.popBackStack() }) {
+            Text("Back")
+        }
+    }
+}
+
+@Composable
+fun TextFieldScreen(navController: NavController) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("This is the Text Field Screen")
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { navController.popBackStack() }) {
+            Text("Back")
+        }
+    }
+}
+
+@Composable
+fun PasswordFieldScreen(navController: NavController) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("This is the Password Field Screen")
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { navController.popBackStack() }) {
+            Text("Back")
+        }
+    }
+}
+
+@Composable
+fun ColumnScreen(navController: NavController) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("This is the Column Screen")
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { navController.popBackStack() }) {
+            Text("Back")
+        }
+    }
+}
+
+@Composable
+fun RowScreen(navController: NavController) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("This is the Row Screen")
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { navController.popBackStack() }) {
+            Text("Back")
+        }
+    }
+}
+
+@Composable
+fun BoxScreen(navController: NavController) {
+    Column(
+        modifier = Modifier.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text("This is the Box Screen")
+        Spacer(modifier = Modifier.height(16.dp))
+        Button(onClick = { navController.popBackStack() }) {
+            Text("Back")
+        }
+    }
+}
+
 @Preview(showBackground = true)
 @Composable
-fun PreviewContentScreen() {
-    ContentScreen()
+fun previewTopBar(){
+    val navController = rememberNavController()
+    CustomTopAppBar(navController, title = "TEST")
 }
+
