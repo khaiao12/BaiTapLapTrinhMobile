@@ -64,6 +64,6 @@ fun AppContent(navController: NavController) {
 @Preview(showBackground = true)
 @Composable
 fun PreviewAppContent() {
-    val navController = rememberNavController() // Tạo NavController giả
+    val navController = rememberNavController()
     AppContent(navController)
 }

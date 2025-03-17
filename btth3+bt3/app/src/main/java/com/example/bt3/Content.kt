@@ -100,7 +100,7 @@ fun CustomTopAppBar(navController: NavController, title: String) {
         verticalAlignment = Alignment.CenterVertically
     ) {
         IconButton(onClick = { navController.popBackStack() }) {
-            Text("<", color = Color.Blue, fontSize = 40.sp) // Biểu tượng trở về
+            Text("<", color = Color.Blue, fontSize = 40.sp)
         }
         Spacer(modifier = Modifier.width(50.dp))
         Text(text = title, color = Color.Blue, fontSize = 40.sp)
@@ -164,84 +164,66 @@ fun TextScreen(navController: NavController) {
 @Composable
 fun ImageScreen(navController: NavController) {
     Column(
-        modifier = Modifier.padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxSize()
     ) {
+        CustomTopAppBar(navController, title = "Image Detail")
         Text("This is the Image Screen")
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.popBackStack() }) {
-            Text("Back")
-        }
     }
 }
 
 @Composable
 fun TextFieldScreen(navController: NavController) {
     Column(
-        modifier = Modifier.padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxSize()
     ) {
+        CustomTopAppBar(navController, title = "Text field Detail")
         Text("This is the Text Field Screen")
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.popBackStack() }) {
-            Text("Back")
-        }
     }
 }
 
 @Composable
 fun PasswordFieldScreen(navController: NavController) {
     Column(
-        modifier = Modifier.padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxSize()
     ) {
+        CustomTopAppBar(navController, title = "Password Field Detail")
         Text("This is the Password Field Screen")
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.popBackStack() }) {
-            Text("Back")
-        }
     }
 }
 
 @Composable
 fun ColumnScreen(navController: NavController) {
     Column(
-        modifier = Modifier.padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxSize()
     ) {
+        CustomTopAppBar(navController, title = "Column Detail")
         Text("This is the Column Screen")
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.popBackStack() }) {
-            Text("Back")
-        }
     }
 }
 
 @Composable
 fun RowScreen(navController: NavController) {
     Column(
-        modifier = Modifier.padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxSize()
     ) {
+        CustomTopAppBar(navController, title = "Row Detail")
         Text("This is the Row Screen")
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.popBackStack() }) {
-            Text("Back")
-        }
     }
 }
 
 @Composable
 fun BoxScreen(navController: NavController) {
     Column(
-        modifier = Modifier.padding(16.dp),
-        horizontalAlignment = Alignment.CenterHorizontally
+        modifier = Modifier.fillMaxSize()
     ) {
+        CustomTopAppBar(navController, title = "Box Detail")
         Text("This is the Box Screen")
         Spacer(modifier = Modifier.height(16.dp))
-        Button(onClick = { navController.popBackStack() }) {
-            Text("Back")
-        }
     }
 }
 
