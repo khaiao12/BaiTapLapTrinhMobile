@@ -7,6 +7,6 @@ import com.example.bt6api.data.models.Task
 import retrofit2.http.GET
 
 interface ApiService {
-    @GET("tasks")
+    @GET("Posts")
     suspend fun getTasks(): List<Task>
 }

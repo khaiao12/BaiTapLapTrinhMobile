@@ -105,6 +105,17 @@ fun getSampleData(): List<String> {
         "03 | The only way to do great work is to love what you do.",
         "04 | The only way to do great work is to love what you do.",
         "05 | The only way to do great work is to love what you do.",
+        "06 | The only way to do great work is to love what you do.",
+        "07 | The only way to do great work is to love what you do.",
+        "08 | The only way to do great work is to love what you do.",
+        "09 | The only way to do great work is to love what you do.",
+        "10 | The only way to do great work is to love what you do.",
+        "11 | The only way to do great work is to love what you do.",
+        "12 | The only way to do great work is to love what you do.",
+        "13 | The only way to do great work is to love what you do.",
+        "14 | The only way to do great work is to love what you do.",
+        "15 | The only way to do great work is to love what you do.",
+        "16 | The only way to do great work is to love what you do.",
         "1.000.000 | The only way to do great work is to love what you do."
     )
 }

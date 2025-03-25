@@ -19,6 +19,7 @@ fun DetailScreen(navController: NavController){
         Text(text = "This is the detail content.", style = MaterialTheme.typography.bodyLarge)
         Text(text = "Here you can add more information about the item.", style = MaterialTheme.typography.bodyMedium)
 
+        Spacer(Modifier.height(200.dp))
         Button(onClick = { navController.navigate("home") }) {
             Text("Back to Root")
         }

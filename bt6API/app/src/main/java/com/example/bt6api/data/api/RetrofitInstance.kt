@@ -5,7 +5,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitInstance {
 
-    private const val BASE_URL = "https://amock.io/api/researchUTH/"
+    private const val BASE_URL = "https://jsonplaceholder.typicode.com/"
 
     val api: ApiService by lazy {
         Retrofit.Builder()
