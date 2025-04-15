@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "821227989214",
+    "project_id": "btlogin-57889",
+    "storage_bucket": "btlogin-57889.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821227989214:android:7aaa79f6720cda18a5fa4f",
+        "android_client_info": {
+          "package_name": "com.example.btLogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821227989214-up28po6gdod86g6cdt0on82ktt822ae8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcRl98E8pPwG26yApX_zmSOhH3i_x-Okw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821227989214-up28po6gdod86g6cdt0on82ktt822ae8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821227989214:android:66c4343d7a293781a5fa4f",
+        "android_client_info": {
+          "package_name": "com.example.btlogin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821227989214-up28po6gdod86g6cdt0on82ktt822ae8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcRl98E8pPwG26yApX_zmSOhH3i_x-Okw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821227989214-up28po6gdod86g6cdt0on82ktt822ae8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
